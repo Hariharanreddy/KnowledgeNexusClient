@@ -1,68 +1,127 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Knowledge Nexus - eLearning Platform
 
-## Available Scripts
+Knowledge Nexus is an eLearning platform built using the MERN (MongoDB, Express.js, React, Node.js) stack. It provides students with access to educational resources at any time and from anywhere, while allowing educators to reach a global audience and deliver quality education. This repository contains the source code for the Knowledge Nexus platform.
 
-In the project directory, you can run:
 
-### `npm start`
+![Untitled video - Made with Clipchamp (2)](https://github.com/Hariharanreddy/KnowledgeNexusClient/assets/82924830/d2dc0277-b628-40b7-b62e-030dd7c327c7)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## Features
 
-### `npm test`
+Apologies for the length. Here are the features in a concise format:
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Admin Dashboard:
+  - A dedicated dashboard for administrators to manage and monitor the platform.
+  - Access to user management, course management, and content moderation.
 
-### `npm run build`
+- Payment Integration:
+  - Integration with Razorpay for secure and seamless online payment processing.
+  - Users can make payments for courses, subscriptions, or additional resources.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Debouncing:
+  - Utilizes debouncing technique to optimize user input handling.
+  - Prevents excessive API calls or form submissions by delaying requests until the user stops typing.
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+- Interactive Charts:
+  - Integration with Chart.js library to display visually appealing and responsive charts.
+  - Provides data visualization for analytics, progress tracking, or course performance.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Password Reset via Email:
+  - Allows users to reset their passwords through a password reset email.
+  - Users receive a secure link in their registered email to reset their password.
 
-### `npm run eject`
+- Authentication:
+  - User registration and login system with secure authentication using JWT (JSON Web Tokens).
+  - Allows users to access personalized content, track progress, and save preferences.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- Lectures and User Management:
+  - Educators can create and manage lecture materials, including videos, presentations, or documents.
+  - Users can access lectures, bookmark content, and track their progress.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Tech Stack
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+- Front-end:
+  - React: JavaScript library for building user interfaces.
+  - Chart.js: JavaScript library for creating responsive charts.
+  - Chakra-UI: Component library for building React applications.
+  - Redux: Predictable state management for large-scale applications.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+- Back-end:
+  - Node.js: JavaScript runtime environment.
+  - Express.js: Minimalist web framework for building web applications and APIs.
+  - MongoDB: NoSQL database program that uses JSON-like documents.
 
-## Learn More
+## Installation
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. Clone the repository:
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+```bash
+git clone <repository-url>
+```
 
-### Code Splitting
+2. Install dependencies for the server:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+```bash
+cd server
+npm install
+```
 
-### Analyzing the Bundle Size
+3. Install dependencies for the client:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
+```bash
+cd client
+npm install
+```
 
-### Making a Progressive Web App
+4. Set up environment variables:
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
+Create a `.env` file in the server directory and configure the following variables:
 
-### Advanced Configuration
+```dotenv
+PORT=<server-port>
+MONGODB_URI=<mongodb-connection-uri>
+JWT_SECRET=<jwt-secret-key>
+CLOUDINARY_API_KEY=<cloudinary-api-key>
+CLOUDINARY_API_SECRET=<cloudinary-api-secret>
+RAZORPAY_KEY_ID=<razorpay-key-id>
+RAZORPAY_KEY_SECRET=<razorpay-key-secret>
+EMAIL_USERNAME=<email-username>
+EMAIL_PASSWORD=<email-password>
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
+5. Start the development server:
 
-### Deployment
+```bash
+cd server
+npm run dev
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+6. Start the client:
 
-### `npm run build` fails to minify
+```bash
+cd client
+npm start
+```
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+7. Open the application in your browser:
+
+```
+http://localhost:3000
+```
+
+## Folder Structure
+
+- `client`: Contains the front-end code and React components.
+- `server`: Contains the back-end code and API routes.
+- `server/controllers`: Controllers for handling API requests.
+- `server/models`: Database models using MongoDB.
+- `server/routes`: API routes.
+- `server/config`: Configuration files for database connection and other settings.
+
+## Contributing
+
+We welcome contributions to improve the Knowledge Nexus platform. If you have any suggestions, bug reports, or feature requests, please open an issue or submit a pull request.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). Feel free to use and modify the code as per your needs.
