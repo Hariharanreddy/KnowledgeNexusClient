@@ -113,7 +113,7 @@ const Dashboard = () => {
             <Databox
               title="Views"
               qty={viewsCount}
-              qtyPercentage={viewsPercentage}
+              qtyPercentage={Math.round(viewsPercentage)}
               profit={viewsProfit}
             />
             <Databox
