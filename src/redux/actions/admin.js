@@ -9,6 +9,7 @@ export const createCourse = formData => async dispatch => {
       },
       withCredentials: true,
     };
+    
     dispatch({ type: 'createCourseRequest' });
 
     const { data } = await axios.post(
